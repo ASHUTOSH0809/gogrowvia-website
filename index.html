@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GoGrowVia - Expert performance marketing agency specializing in Google Ads, Meta Ads, and growth strategies for eCommerce businesses.">
-    <title>GoGrowVia - Your Path to Digital Growth</title>
-    
+    <title>GoGrowVia - Your Growth Partner in Performance Marketing</title>
     <style>
         * {
             margin: 0;
@@ -13,43 +11,23 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
-            --dark: #0f172a;
-            --dark-light: #1e293b;
-            --text: #f1f5f9;
-            --text-muted: #94a3b8;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--dark);
-            color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
+            color: #333;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
             top: 0;
-            width: 100%;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
         }
 
-        nav.scrolled {
-            background: rgba(15, 23, 42, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-container {
-            max-width: 1400px;
+        nav {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
             display: flex;
@@ -58,12 +36,9 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6366f1;
         }
 
         .nav-links {
@@ -73,218 +48,149 @@
         }
 
         .nav-links a {
-            color: var(--text-muted);
             text-decoration: none;
+            color: #333;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--text);
+            color: #6366f1;
         }
 
         .cta-button {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: #6366f1;
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: background 0.3s;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--text);
-            border-radius: 3px;
-            transition: all 0.3s ease;
+            background: #4f46e5;
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 2rem 4rem;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            top: -200px;
-            right: -200px;
-            animation: float 20s ease-in-out infinite;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-            bottom: -150px;
-            left: -150px;
-            animation: float 15s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-content p {
+        .hero p {
             font-size: 1.25rem;
-            color: var(--text-muted);
             margin-bottom: 2rem;
-            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .primary-btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
+        .primary-button {
+            background: white;
+            color: #6366f1;
             padding: 1rem 2rem;
-            border-radius: 12px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            transition: transform 0.3s;
         }
 
-        .primary-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+        .primary-button:hover {
+            transform: translateY(-2px);
         }
 
-        .secondary-btn {
-            background: rgba(255, 255, 255, 0.05);
+        .secondary-button {
+            background: transparent;
             color: white;
+            border: 2px solid white;
             padding: 1rem 2rem;
-            border-radius: 12px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            transition: background 0.3s;
         }
 
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
+        .secondary-button:hover {
+            background: rgba(255,255,255,0.1);
         }
 
-        .hero-stats {
+        /* Badges */
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
         }
 
-        .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
-        }
-
-        .stat-number {
+        .stat-item h3 {
             font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #6366f1;
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        .stat-item p {
+            color: #666;
         }
 
         /* Services Section */
         .services {
+            background: #f9fafb;
             padding: 6rem 2rem;
-            background: var(--dark-light);
         }
 
-        .section-header {
+        .section-title {
             text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 3rem;
-            font-weight: 800;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .section-header p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
         }
 
         .services-grid {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -292,481 +198,569 @@
         }
 
         .service-card {
-            background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
-            border-color: var(--primary);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+            color: #6366f1;
         }
 
-        .service-card p {
-            color: var(--text-muted);
-            line-height: 1.7;
+        .service-label {
+            font-weight: bold;
+            color: #333;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-item h3 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .values-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .values-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .values-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
         }
 
         /* Process Section */
         .process {
+            background: #f9fafb;
             padding: 6rem 2rem;
-            background: var(--dark);
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .process-grid {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
             text-align: center;
-            position: relative;
         }
 
         .step-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #6366f1;
+            color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-        }
-
-        .process-step h3 {
+            line-height: 50px;
             font-size: 1.5rem;
+            font-weight: bold;
             margin-bottom: 1rem;
         }
 
-        .process-step p {
-            color: var(--text-muted);
+        .process-step h3 {
+            margin-bottom: 1rem;
+            color: #333;
         }
 
         /* CTA Section */
         .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             text-align: center;
         }
 
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .cta-section h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .cta-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
         }
 
-        .cta-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 600px;
+        .cta-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .cta-input {
-            flex: 1;
-            padding: 1rem 1.5rem;
-            border: none;
+        .cta-box {
+            background: white;
+            color: #333;
+            padding: 2rem;
             border-radius: 12px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
         }
 
-        .cta-submit {
-            padding: 1rem 2rem;
-            background: var(--dark);
+        .cta-box h3 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box-button {
+            display: inline-block;
+            background: #6366f1;
             color: white;
-            border: none;
-            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1rem;
             font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .cta-submit:hover {
-            background: var(--dark-light);
-            transform: translateY(-2px);
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #6366f1;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #4f46e5;
+        }
+
+        .form-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #1f2937;
+            color: white;
             padding: 4rem 2rem 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .footer-content {
-            max-width: 1400px;
+        .footer-container {
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-section h4 {
-            font-size: 1.2rem;
+        .footer-section h3 {
             margin-bottom: 1rem;
+            color: #6366f1;
         }
 
-        .footer-section ul {
+        .footer-section p {
+            margin-bottom: 1rem;
+            color: #d1d5db;
+        }
+
+        .footer-links {
             list-style: none;
         }
 
-        .footer-section ul li {
-            margin-bottom: 0.75rem;
+        .footer-links li {
+            margin-bottom: 0.5rem;
         }
 
-        .footer-section a {
-            color: var(--text-muted);
+        .footer-links a {
+            color: #d1d5db;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
-        .footer-section a:hover {
-            color: var(--primary);
+        .footer-links a:hover {
+            color: #6366f1;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-muted);
+            border-top: 1px solid #374151;
+            color: #9ca3af;
         }
 
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 968px) {
+        /* Responsive */
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .menu-toggle {
-                display: flex;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
-                margin-top: 3rem;
-            }
-
-            .section-header h2 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .cta-form {
-                flex-direction: column;
-            }
-
-            .cta-section h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-content p {
+            .hero p {
                 font-size: 1rem;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .primary-btn, .secondary-btn {
-                width: 100%;
-                text-align: center;
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
+    <!-- Header -->
+    <header>
+        <nav>
             <div class="logo">GoGrowVia</div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#process">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-button">Get Started</a>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>
-                    Your Path to <span class="gradient-text">Digital Growth</span> Starts Here
-                </h1>
-                <p>
-                    We help businesses scale with data-driven performance marketing. From Google Ads to Meta campaigns, we turn clicks into customers and investments into ROI.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="primary-btn">Get Free Audit</a>
-                    <a href="https://wa.me/1234567890" target="_blank" class="secondary-btn">WhatsApp Us</a>
-                </div>
+        <h1>🚀 Your Growth Partner</h1>
+        <p>We Help Your Business Grow with Performance Marketing</p>
+        <p>From eCommerce store setup to Meta Ads management and social media handling. We turn your vision into revenue with data-driven strategies.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="primary-button">Get Free Growth Audit</a>
+            <a href="https://wa.me/917303584707" class="secondary-button">WhatsApp Chat</a>
+        </div>
+        <div class="badges">
+            <span class="badge">eCommerce Experts</span>
+            <span class="badge">Meta Ads Certified</span>
+            <span class="badge">Growth Focused</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>3.2x</h3>
+                <p>Avg ROAS Increase</p>
             </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-number">300%</div>
-                    <div class="stat-label">Average ROI Increase</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">$2M+</div>
-                    <div class="stat-label">Ad Spend Managed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support Available</div>
-                </div>
+            <div class="stat-item">
+                <h3>47%</h3>
+                <p>Lower CPA</p>
+            </div>
+            <div class="stat-item">
+                <h3>2.1M+</h3>
+                <p>Ad Spend Managed</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Active Clients</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our <span class="gradient-text">Services</span></h2>
-            <p>Comprehensive digital marketing solutions to grow your business</p>
-        </div>
+        <h2 class="section-title">📋 Our Services</h2>
+        <p class="section-subtitle">Complete solutions to scale your business from setup to growth.</p>
+        
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>Google Ads Management</h3>
-                <p>Strategic Google Ads campaigns that drive qualified traffic and maximize your ROAS. We handle Search, Shopping, Display, and YouTube ads.</p>
+                <h3>eCommerce Store Setup</h3>
+                <div class="service-label">What</div>
+                <p>Complete eCommerce store setup across all major platforms - Shopify, WordPress/WooCommerce, Amazon, Flipkart, Meesho, and more. Includes theme customization, product listings, payment gateways, and conversion optimization.</p>
+                
+                <div class="service-label">Why</div>
+                <p>Your store is your digital storefront, regardless of platform. A professional, fast, and conversion-optimized presence is the foundation of online success - whether you're selling on your own site or marketplaces.</p>
+                
+                <div class="service-label">Impact</div>
+                <p>Launch faster, convert better, and scale confidently with a store built for growth from day one. Multi-platform presence maximizes your reach and revenue potential.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>Meta Ads (Facebook & Instagram)</h3>
-                <p>Engaging social media campaigns on Facebook and Instagram that build brand awareness and convert followers into customers.</p>
+                <h3>Meta Ads Management</h3>
+                <div class="service-label">What</div>
+                <p>Strategic Facebook and Instagram ad campaigns with advanced targeting, creative testing, and ROAS-focused optimization.</p>
+                
+                <div class="service-label">Why</div>
+                <p>Meta platforms have 3+ billion users. The right ads reach your ideal customers where they spend their time.</p>
+                
+                <div class="service-label">Impact</div>
+                <p>Generate consistent, profitable sales with campaigns that scale while maintaining or improving ROAS.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">🚀</div>
-                <h3>Conversion Optimization</h3>
-                <p>High-converting landing pages and sales funnels designed to turn your traffic into revenue. Mobile-first and lightning-fast.</p>
+                <h3>Social Media Handling</h3>
+                <div class="service-label">What</div>
+                <p>Complete social media management - content creation, scheduling, community engagement, and brand building across platforms.</p>
+                
+                <div class="service-label">Why</div>
+                <p>Consistent, engaging social presence builds trust, creates brand loyalty, and drives organic growth alongside paid efforts.</p>
+                
+                <div class="service-label">Impact</div>
+                <p>Build a loyal community, reduce customer acquisition costs, and create multiple touchpoints in your customer journey.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">📊</div>
-                <h3>Analytics & Tracking</h3>
-                <p>Complete analytics setup with GA4, conversion tracking, and custom dashboards so you always know what's working.</p>
+                <h3>Product Photography</h3>
+                <div class="service-label">What</div>
+                <p>Professional product photography and visual content creation that showcases your products in the best light.</p>
+                
+                <div class="service-label">Why</div>
+                <p>High-quality visuals are critical for eCommerce. Customers can't touch products - images must sell the experience.</p>
+                
+                <div class="service-label">Impact</div>
+                <p>Increase conversion rates, reduce returns, and create scroll-stopping content for ads and social media.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">🛒</div>
-                <h3>eCommerce Growth</h3>
-                <p>Specialized strategies for Shopify and WordPress stores. We optimize product catalogs, checkout flows, and customer journeys.</p>
+                <h3>Growth Strategy</h3>
+                <div class="service-label">What</div>
+                <p>Comprehensive growth planning including market analysis, customer journey mapping, funnel optimization, and scalable systems.</p>
+                
+                <div class="service-label">Why</div>
+                <p>Random tactics don't scale. You need a cohesive strategy that aligns all marketing efforts toward measurable business goals.</p>
+                
+                <div class="service-label">Impact</div>
+                <p>Sustainable, predictable growth. Break through revenue plateaus and build a business that scales profitably.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">✍️</div>
-                <h3>Creative & Copywriting</h3>
-                <p>Compelling ad creatives and conversion-focused copy that resonates with your audience and drives action.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2 class="section-title">💡 About GoGrowVia</h2>
+            
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3>Why GoGrowVia Started</h3>
+                    <p>We saw too many talented entrepreneurs with great products struggling to grow online. They were overwhelmed by conflicting advice, burned by agencies that overpromised and underdelivered, and stuck doing everything themselves. GoGrowVia was born to be the growth partner we wished existed - honest, effective, and genuinely invested in your success.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses with the tools, strategies, and support they need to grow sustainably. We believe every business deserves access to world-class marketing - not just the ones with massive budgets. Our mission is to level the playing field and help you compete with the big players.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Our Approach</h3>
+                    <p>We combine data-driven decision making with creative excellence. No cookie-cutter solutions - we take the time to understand your business, your customers, and your goals. Then we build custom strategies that actually work for YOU.</p>
+                    <p>We're obsessed with results, not vanity metrics. Every campaign is measured against real business outcomes: revenue, profit, and sustainable growth.</p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Our Values</h3>
+                    <ul class="values-list">
+                        <li><strong>Transparency First:</strong> You own your accounts and data. We show you exactly what we're doing and why.</li>
+                        <li><strong>Results Over Hype:</strong> We'd rather under-promise and over-deliver than the other way around.</li>
+                        <li><strong>Continuous Learning:</strong> Marketing evolves fast. We stay ahead so you don't fall behind.</li>
+                        <li><strong>Partnership Mindset:</strong> Your success is our success. We're in this together.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
     <section id="process" class="process">
-        <div class="section-header">
-            <h2>How We <span class="gradient-text">Work</span></h2>
-            <p>Our proven 4-step process to accelerate your growth</p>
-        </div>
-        <div class="process-grid">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Discovery & Audit</h3>
-                <p>We analyze your current marketing, identify opportunities, and create a custom growth strategy.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Strategy & Setup</h3>
-                <p>We build your campaigns, implement tracking, and set up optimized funnels for maximum conversions.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Launch & Optimize</h3>
-                <p>Campaigns go live. We monitor daily, test continuously, and optimize for better performance.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <h3>Scale & Grow</h3>
-                <p>We scale what works, eliminate what doesn't, and send you weekly reports on your growth.</p>
+        <h2 class="section-title">⚙️ How It Works</h2>
+        <p class="section-subtitle">Our proven 4-step process to grow your business.</p>
+        
+        <div class="process-container">
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Growth Audit</h3>
+                    <p>We analyze your current setup, identify opportunities, and create a custom growth plan.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy & Setup</h3>
+                    <p>We build your campaigns, implement tracking, and optimize your funnels for maximum conversions.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Launch & Optimize</h3>
+                    <p>Your campaigns go live. We monitor daily, test continuously, and optimize for better results.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Scale with Data</h3>
+                    <p>We scale what works, cut what doesn't, and send you weekly reports on your growth.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section id="contact" class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Grow Your Business?</h2>
-            <p>Get a free marketing audit and personalized growth strategy. No commitments, just actionable insights.</p>
-            <form class="cta-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="email" name="email" class="cta-input" placeholder="Enter your email" required>
-                <button type="submit" class="cta-submit">Get Free Audit</button>
-            </form>
+        <h2>✅ Ready to Grow Your Business?</h2>
+        <p>Get a free growth audit and personalized strategy session. No commitments, just actionable insights.</p>
+        
+        <div class="cta-options">
+            <div class="cta-box">
+                <h3>Chat on WhatsApp</h3>
+                <p>Get instant answers to your questions. We typically respond within minutes during business hours.</p>
+                <a href="https://wa.me/917303584707" class="cta-box-button">Start WhatsApp Chat</a>
+            </div>
+
+            <div class="cta-box">
+                <h3>Request Free Audit</h3>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Website URL (Optional)</label>
+                            <input type="url">
+                        </div>
+                        <div class="form-group">
+                            <label>What service are you interested in?</label>
+                            <select required>
+                                <option value="">Select a service</option>
+                                <option value="ecommerce">eCommerce Store Setup</option>
+                                <option value="meta-ads">Meta Ads Management</option>
+                                <option value="social-media">Social Media Handling</option>
+                                <option value="photography">Product Photography</option>
+                                <option value="growth">Growth Strategy</option>
+                                <option value="all">All Services</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-button">Get Free Audit</button>
+                        <p class="form-note">We'll respond within 24 hours</p>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-container">
             <div class="footer-section">
-                <h4 class="gradient-text">GoGrowVia</h4>
-                <p style="color: var(--text-muted); margin-top: 1rem;">Your trusted partner for digital growth and performance marketing excellence.</p>
+                <h3>GoGrowVia</h3>
+                <p>Your partner in sustainable business growth through data-driven marketing.</p>
             </div>
+
             <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Google Ads</a></li>
-                    <li><a href="#services">Meta Ads</a></li>
-                    <li><a href="#services">Conversion Optimization</a></li>
-                    <li><a href="#services">Analytics</a></li>
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">eCommerce Store Setup</a></li>
+                    <li><a href="#services">Meta Ads Management</a></li>
+                    <li><a href="#services">Social Media Handling</a></li>
+                    <li><a href="#services">Product Photography</a></li>
+                    <li><a href="#services">Growth Strategy</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#process">How It Works</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h4>Connect</h4>
-                <ul>
+                <h3>Connect</h3>
+                <ul class="footer-links">
                     <li><a href="mailto:hello@gogrowvia.com">hello@gogrowvia.com</a></li>
-                    <li><a href="https://wa.me/1234567890">WhatsApp</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
+                    <li><a href="https://wa.me/917303584707">WhatsApp: +91 7303584707</a></li>
                 </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 GoGrowVia. All rights reserved.</p>
+            <p>© 2026 GoGrowVia. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/1234567890?text=Hi! I'd like to learn more about your services" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle (basic implementation)
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            alert('Mobile menu functionality - connect this to show/hide nav-links');
-        });
-    </script>
 </body>
 </html>
